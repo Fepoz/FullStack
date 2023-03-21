@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Css</title>
+</head>
+
+<body>
+    <h1>How to add Css</h1>
+    <p>There are three ways of inserting a style sheet:</p>
+    <ul>
+        <li>External CSS</li>
+        <li>Internal CSS</li>
+        <li>Inline CSS</li>
+    </ul>
+    <hr>
+    <br>
+    <h3>External CSS</h3>
+    <p>With an external style sheet, you can change the look of an entire website by changing just one file!
+
+        Each HTML page must include a reference to the external style sheet file inside the
+        <link> element, inside the head section.
+    </p><br>
+    <p>An external style sheet can be written in any text editor, and must be saved with a .css extension.
+
+        The external .css file should not contain any HTML tags.
+
+        Here is how the "mystyle.css" file looks:
+
+    </p><br>
+    <pre>
+                body {
+                    background-color: lightblue;
+                  }
+                  
+                  h1 {
+                    color: navy;
+                    margin-left: 20px;
+                  }
+            </pre>
+    <hr>
+    <br>
+
+    <h3>Internal CSS</h3>
+    <p> An internal style sheet may be used if one single HTML page has a unique style.
+
+        The internal style is defined inside the &lt;style&gt; element, inside the head section</p><br>
+    <pre>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html&gt;
+                    &lt;head&gt;
+                    &lt;style&gt
+                    body {
+                    background-color: linen;
+                    }
+
+                    h1 {
+                    color: maroon;
+                    margin-left: 40px;
+                    }
+                    &lt;style&gt
+                    &lt;head&gt
+                    &lt;body &gt;
+
+                  &lt;h1&gt; This is a heading &lt; h1 &gt;
+                  &lt;p&gtThis is a paragraph.&lt;p&gt
+
+                  &lt;body&gt
+                  &lt;html&gt
+
+                </pre>
+    <hr>
+    <h3>Inline CSS</h3>
+    <p>An inline style may be used to apply a unique style for a single element.
+
+        To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS
+        property.
+    </p>
+    <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;body&gt
+
+        &lt;h1&gt;style="color:blue;text-align:center;">This is a heading&lt;h1&gt;
+        &lt;p&gt; style="color:red;">This is a paragraph.&lt;p&gt;
+
+            &lt;body&gt
+            &lt;html&gt;
+            <hr>
+
+
+    </pre>
+
+
+
+
+
+</body>
+
+</html>

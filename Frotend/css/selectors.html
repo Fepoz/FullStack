@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors</title>
+</head>
+
+<body>
+    <h1>CSS Selectors</h1>
+    <p>CSS selectors are used to "find" (or select) the HTML elements you want to style.</p>
+    <hr>
+
+    <h3>Css element selector</h3>
+    <p>The element selector selects HTML elements based on the element name. </p>
+    <br>
+
+    <pre> p {
+        text-align: center;
+        color: red;
+      }
+    </pre>
+    <br>
+    <hr>
+
+    <h3>Css id selectors</h3>
+    <p>The id selector uses the id attribute of an HTML element to select a specific element.
+
+        The id of an element is unique within a page, so the id selector is used to select one unique element!
+
+        To select an element with a specific id, write a hash (#) character, followed by the id of the element.</p><br>
+    <pre>
+        #para1 {
+            text-align: center;
+            color: red;
+          }
+
+    </pre>
+    <br>
+    <hr>
+    <h3>Css class selectors</h3>
+    <p>The class selector selects HTML elements with a specific class attribute.
+
+        To select elements with a specific class, write a period (.) character, followed by the class name.</p><br>
+    <pre>
+        .center {
+            text-align: center;
+            color: red;
+          }
+
+    </pre>
+    <h3>The Css Universal selector</h3>
+    <p>The universal selector (*) selects all HTML elements on the page.</p><br>
+    <pre>
+        * {
+            text-align: center;
+            color: blue;
+          }
+
+    </pre>
+    <hr>
+
+    <h3>The CSS Grouping Selector</h3>
+    <p>The grouping selector selects all the HTML elements with the same style definitions.
+
+        Look at the following CSS code (the h1, h2, and p elements have the same style definitions):</p><br>
+        <pre>
+            h1, h2, p {
+                text-align: center;
+                color: red;
+              }
+        </pre>
+        <hr>
+
+
+</body>
+
+</html>
