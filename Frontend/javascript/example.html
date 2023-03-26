@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <style>
+        div {
+            padding: 20px;
+        }
+
+        span {
+            border: 1px solid #333;
+            background-color: #eee;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Examples</h1>
+    <div>
+        <span id="Seats" onclick="selectiondone(this)" onmouseover="Pricedetails(this)" onmouseout="Backtonormal(this)" >Seat1</span>
+        <span id="Seats" onclick="Pricedetails(this)">Seat2</span>
+        <span id="Seats" onclick="Pricedetails(this)">Seat3</span>
+
+    </div>
+    <script>
+        var before = document.getElementById("Seats").innerHTML;
+        console.log(before);
+
+        function Pricedetails(e){
+           document.getElementById(e.id).innerHTML ="500rs";
+
+        }
+      
+        function selectiondone(e){
+            document.getElementById(e.id).innerHTML= e.id+"Booked";
+        }
+        function Backtonormal(e){
+            document.getElementById(e.id).innerHTML= before;
+        }
+
+        if(selectiondone)
+        {
+            document.getElementById(e.id).innerHTML="Booked";
+        }
+
+    </script>
+
+</body>
+
+</html>
