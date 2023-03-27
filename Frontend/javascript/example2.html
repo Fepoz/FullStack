@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript example</title>
+<style>
+	div{
+	padding:20px;
+	}
+	span{
+	border:1px solid #333;
+	background-color:#eee;
+	padding:10px;
+	cursor:pointer;
+	}
+</style>
+
+    
+</head>
+<body>
+    <h1>Example1</h1>
+    <p>The alert displays the id when clicked in the span</p>
+    <div>
+        <span id="spBook1" onclick="BookSeat(this)">Seat1</span>
+        <span id="spBook2" onclick="BookSeat(this)">Seat2</span>
+        <span id="spBook3" onclick="BookSeat(this)">Seat3</span>
+
+    </div>
+    <hr>
+    <h1>Example2</h1>
+    <p>Changes the innerHTML when clicked</p>
+    <div>
+        <span id="spBook4" onclick="Seat(this)">Seat1</span>
+        <span id="spBook5" onclick="Seat(this)">Seat2</span>
+        <span id="spBook6" onclick="Seat(this)">Seat3</span>
+
+    </div>
+    <hr>
+    <h1>Example3</h1>
+    <p>Shows the price on mouseover and gets booked onclick</p>
+    <div>
+        <span id="spBook7" onclick="Seat(this)" onmouseover="SeatPrice(this)" onmouseout="ResetSeat(this)">Seat1</span>
+        <span id="spBook8" onclick="Seat(this)">Seat2</span>
+        <span id="spBook9" onclick="Seat(this)">Seat3</span>
+
+    </div>
+
+
+    <script>
+
+        var isspBook7Clicked =false;
+        var firstSeat="";
+        function BookSeat(e){
+            alert(e.id);
+        }
+        function Seat(e){
+            isspBook7Clicked=true;
+            firstSeat=document.getElementById(e.id).innerHTML;
+            document.getElementById(e.id).innerHTML= e.id + "Booked";
+         //  alert(firstSeat);
+        }
+       
+        function SeatPrice(e){
+            firstSeat=document.getElementById(e.id).innerHTML;
+            document.getElementById(e.id).innerHTML=(e.id +" "+"300 RS");
+        }
+       
+            
+        function ResetSeat(e){
+            console.log(e);
+            var myVar = document.getElementById(e.id).innerHTML;
+            //alert(myVar);
+           // console.log(myVar);
+            if(!isspBook7Clicked){
+
+                document.getElementById(e.id).innerHTML=firstSeat;
+            }
+            //console.log=myVar;
+            
+        }
+        
+
+    </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Selector</title>
+    <style>
+        p>strong {
+            color: red
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Child selector</h1>
+    <hr>
+
+    <p>
+    <h3>A CSS child selector allows you to select and style only the elements that are direct descendant 
+    </h3>
+    </p>
+    <pre> p>strong{color:blue}
+        Only the strong elements that are direct descandants of a  paragraph are shown in red.
+    </pre>
+    <hr>
+    <br>
+
+    <div>
+        <p><strong>CSS rocks!</strong></p>
+        <p>
+            <a href="#"><strong>hello world</strong></a>
+        </p>
+    </div>
+</body>
+
+</html>

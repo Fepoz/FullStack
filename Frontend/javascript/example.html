@@ -22,8 +22,9 @@
 
 <body>
     <h1>Examples</h1>
+    <p>This example shows the onclick,onmouseover and the onmouseout function</p>
     <div>
-        <span id="Seats" onclick="selectiondone(this)" onmouseover="Pricedetails(this)" onmouseout="Backtonormal(this)" >Seat1</span>
+        <span id="Seats" onclick="selectiondone(this)" onmouseover="Pricedetails(this)" onmouseout="Backtonormal(this)">Seat1</span>
         <span id="Seats" onclick="Pricedetails(this)">Seat2</span>
         <span id="Seats" onclick="Pricedetails(this)">Seat3</span>
 
@@ -31,24 +32,22 @@
     <script>
         var before = document.getElementById("Seats").innerHTML;
         console.log(before);
+        // var before= "";
 
         function Pricedetails(e){
-           document.getElementById(e.id).innerHTML ="500rs";
-
+            var details= document.getElementById(e.id).innerHTML ="500rs";
+       
         }
       
         function selectiondone(e){
-            document.getElementById(e.id).innerHTML= e.id+"Booked";
+           before= document.getElementById(e.id).innerHTML= e.id+"Booked";
+           console.log(before);
         }
         function Backtonormal(e){
             document.getElementById(e.id).innerHTML= before;
         }
-
-        if(selectiondone)
-        {
-            document.getElementById(e.id).innerHTML="Booked";
-        }
-
+    
+      
     </script>
 
 </body>
