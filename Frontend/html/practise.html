@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise</title>
+</head>
+
+<body>
+    Q(1) How to comment HTML tags?
+    <p>HTML Tutorial</p>
+    <p>Python Tutorial</p>
+    <!--<p>PHP Tutorial</p>-->
+    <hr>
+
+    Q(2) How to create a hyperlink? <br>
+    <a href="https://www.google.com/">click here to visit google</a>
+    <hr>
+
+    Q(3) what is the correct way to write the address in html?
+    <address> Address: 21,Ramkrishna Road <br>
+        Burdwan <br>
+        West Bengal.
+    </address>
+    <hr>
+    Q(4) how to define an area inside an image map?
+
+    <img src="https://www.w3resource.com/html/area/html-area-element.png" alt="area example " width="308" height="190"
+        border="0" usemap="#Map">
+    <map name="Map">
+        <area shape="rect" coords="8,5,100,77" href="https://www.w3resource.com/mysql/mysql-tutorials.php"
+            target="_blank" alt="mysql tutorial">
+        <area shape="circle" coords="155,93,59" href="https://www.w3resource.com/php/php-home.php" target="_blank"
+            alt="php tutorial">
+        <area shape="rect" coords="197,136,306,188" href="https://www.w3resource.com/sql/sql-tutorials.php"
+            alt="sql tutorials">
+    </map>
+    <hr>
+
+    Q(5) Create an HTML document which uses article element?
+
+    <article>
+        <h1>Article element exapmle</h1>
+        <p>HTML5 article element represents independent item like a blog entry in an web document.</p>
+    </article>
+    <hr>
+
+    Q(6) Create an HTML document which uses aside element?
+
+    <aside>
+        <h4>HTML5 tutorial</h4>
+        <p>I can develop excellent web applications with HTML5 and related APIs (like GeoLocation, Drag and Drop,
+            WebSocket etc.)in HTML5 tutorial.</p>
+    </aside>
+    <hr>
+
+    Q(7) How to embed audio in an html document?
+    <audio controls>
+        <source src="https://www.w3resource.com/html-css-exercise/basic/solution/beach.ogg" type="audio/ogg">
+        <source src="https://www.w3resource.com/html-css-exercise/basic/solution/beach.mp3" type="audio/mpeg">
+    </audio>
+    <hr>
+
+    Q(8) How to write bold text in html?
+
+    <b>This is a bold text</b>
+    <hr>
+
+
+    Q(9) How to specify the base URL/target for all relative URLs in a document? <br>
+    Write a base tag in the head of the document and give the url to it
+    <ul>
+        <li><a href="php/php-home.php">PHP Tutorial</a></li>
+        <li><a href="javascript/javascript.php">JavaScript Tutorial</a></li>
+        <li><a href="mysql/mysql-tutorials.php">MySQL Tutorial</a></li>
+        <hr>
+
+        Q(10) How to isolate a part of the text that might be formatted in a different direction from other text outside
+        it?
+        <p>
+            In the example below, usernames are shown along with the number of points in a contest.
+            If the bdi element is not supported in the browser, the username of the Arabic user would confuse the text
+            (the bidirectional algorithm would put the colon and the number "80" next to the word "User" rather than
+            next to the word "points").
+        </p>
+        <ul>
+            <li>User <bdi>hrefs</bdi>: 40 points</li>
+            <li>User <bdi>jdoe</bdi>: 60 points</li>
+            <li>User <bdi>ترحيب</bdi>:80 points</li>
+        </ul>
+        <p><b>Note:</b> The bdi element is currently supported only in Firefox and Chrome.</p>
+        <hr>
+
+
+        Q(11) How to override the current text direction?
+        <p dir="ltr">This is left to right direction </p>
+        <p dir="rtl">This is right to left direction</p>
+        <hr>
+
+        Q(12) How to define a section that is quoted from another source?<br>
+        <h5>use the blockquote tag</h5>
+
+        <blockquote>Freedom is not worth having if it does not connote freedom to err. It passes my comprehension how
+            human beings, be they ever so experienced and able, can delight in depriving other human beings of that
+            precious right.</blockquote>
+        <hr>
+
+        Q(13) How to define the document's body?<br>
+        <p>use the body tag for this</p>
+        <hr>
+
+
+        Q(14) How to define a clickable button?<br>
+
+        <button type="button" onclick="console.log('Welcome Friends')">Click Me!</button>
+        <hr>
+
+        Q(15) How to define a table caption?<br>
+
+        <table border="1"><br>
+            <caption>This is the caption for the table</caption>
+            <thead>
+                <th>Department</th>
+                <th>Employee</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sales</td>
+                    <td>Manan</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+
+        Q(16) How to specify the column properties of each column within a column group element?<br>
+        <table border="1"><br>
+            <caption>The th tag is used for setting the header/column of the table</caption>
+            <thead>
+                <th>Column1</th>
+                <th>Column2</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sales</td>
+                    <td>Manan</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        Q(17) How to specify a list of pre-defined options for input controls?<br>
+
+        <input list="Languages" />
+        <datalist id="Languages">
+            <option value="PHP">
+            <option value="ASP">
+            <option value="Python">
+            <option value="Ruby">
+            <option value="Java">
+        </datalist>
+        <hr>
+
+        Q(18) How to semantically delete text from an HTML document?<br>
+        <p><del datetime="2015-06-25T08:15:30+05:30" cite="https://www.w3resource.com/html/HTML-tutorials.php">We are
+                not using HTML 4.01 Transitional DOCTYPE.</del></p>
+        <hr>
+
+        Q(19) How to define a description/value of a term in a description list?<br>
+        <dl>
+            <dt>PHP</dt>
+            <dd>A server side scripting language.</dd>
+            <dt>JavaScript</dt>
+            <dd>A client side scripting language.</dd>
+        </dl>
+        <hr>
+        Q(20) How to define additional details that the user can view or hide?<br>
+        <details>
+            <summary>PHP is a server side scripting language</summary>
+            <p>PHP is a general-purpose server-side scripting language originally designed for web development to
+                produce dynamic web
+                pages. For this purpose, PHP code is embedded into the HTML source document and interpreted by a web
+                server with a PHP
+                processor module, which generates the web page document.</p>
+        </details>
+        <hr>
+        Q(21) How to define marked/highlighted text?<br>
+        <mark>w3resource</mark>
+        is a web development tutorial.
+        <hr>
+        Q(22) How to define an inline frame?<br>
+        <iframe src="https://www.w3resource.com/html-css-exercise/basic/solution/code-em-answer.html" width="70%"
+            hight="300">
+        </iframe>
+        <hr>
+
+        Q(23) How to define navigation links?<br>
+        <nav>
+            <a href="https://www.w3resource.com/html5/
+            introduction.php">HTML5</a> |
+            <a href="https://www.w3resource.com/html5
+            -canvas/">HTML5 Canvas</a> |
+            <a href="https://www.w3resource.com/schema
+            .org/introduction.php">Schema.org</a>
+            |
+            <a href="https://www.w3resource.com/javasc
+            ript/javascript.php">JavaScript</a>
+        </nav>
+        <hr>
+
+        Q(24) How to define an image?<br>
+        <p><img
+                src="https://www.google.co.in/imgres?imgurl=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1503023345310-bd7c1de61c7d%3Fixlib%3Drb-4.0.3%26ixid%3DMnwxMjA3fDB8MHxzZWFyY2h8Mnx8aHVtYW58ZW58MHx8MHx8%26w%3D1000%26q%3D80&tbnid=Y8NKKCmLLDotWM&vet=12ahUKEwihrIuQ9J3-AhWg_zgGHV9uAKQQMygBegUIARDkAQ..i&imgrefurl=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fhuman&docid=ZaycYywhXLmIVM&w=1000&h=1250&q=images&ved=2ahUKEwihrIuQ9J3-AhWg_zgGHV9uAKQQMygBegUIARDkAQ">
+        </p>
+        <hr>
+
+        Q(25) How to define a clickable button?<br>
+        <strong>
+            <em>HTML CSS Exercise</em>
+        </strong>
+        <hr>
+        Q(26) How to define keyboard input?<br>
+        <em>It is a emphasized text</em><br>
+        <strong>It is a Strong text
+        </strong><br>
+        <code>It is a  piece of computer 
+        code</code><br>
+        <samp>Sample output from a computer
+            program</samp><br>
+        <kbd>Keyboard input</kbd><br>
+        <var>Variable</var>
+        <hr>
+
+        Q(27) How to define a short quotation?<br>
+        <p>Einstein said <q>Truth is what 
+            stands the test of 
+            experience.</q></p> 
+            <hr>
+
+        Q(28) How to define main content of a document<br>
+        <article>
+            <h1>search engines</h1>
+            <p>Google,Bing, and Yahoo! are the most used search engines today.</p>
+            <h1>Google</h1>
+            <p>The world's most popular search engine. </p>
+            <h1>Bing</h1>
+            <p>Microsoft's entry into the burgeoning search engine market. Better late than never.</p>
+            <h1>Yahoo!</h1>
+            <p>The 2nd largest search engine on the web </p>
+            </article>
+            <hr>
+
+        Q(29) How to define a key-pair generator field?<br>
+        <form method="post" 
+        action="https://www.w3resource.com/
+        html-css-
+        exercise/basic/solution/keygen-
+        name -answer-demo.php" >
+          Place: <input type="text" 
+        name="place">
+          Encryption: <keygen 
+        name="security">
+          <input type="submit">
+        </form>
+        Q(30) How to define a multiline input control text area?<br>
+        <textarea rows="4" cols="40">
+            w3resource is a free, open-source 
+            tutorial.you will learn with HTML5 
+            tutorial of w3resource.
+            </textarea>
+            <hr>     
+</body>
+
+</html>
