@@ -7,17 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Table</title>
     <style>
-        table, th, td {
-          border:1px solid black;
-          padding: 15px;
+        table {
+            border-collapse: collapse;
+            width: 100%;
         }
-        </style>
+
+        th,
+        td {
+            border: 2px solid green;
+            padding: 15px;
+        }
+    </style>
 </head>
 
 <body>
     <h1>A simple HTML table</h1>
     <div>
-        <table>
+        <table id="simple">
             <tr>
                 <th>Employe Name</th>
                 <th>Department</th>
@@ -37,17 +43,78 @@
             </tr>
             <tr>
                 <td>Karan</td>
-                <td>Research and Development  </td>
+                <td>Research and Development </td>
                 <td>50000</td>
             </tr>
 
         </table>
     </div>
-    <p><h3>This is the exapmle of a simple table</h3></p>
-    <br><hr>
+    <br>
     <hr>
+    <h1>Nested Table Examples</h1>
+
+    <div>
+        <table>
+            <tr>
+                <td>First</td>
+                <td>Second</td>
+            </tr>
+            <tr>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                <ul>
+                                    <li>nested tables</li>
+                                    <li>nested table exapmle</li>
+                            </td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>hi</td>
+                                        <td>hi</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nested</td>
+                                        <td>Nested</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            </ul>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>nested1</td>
+                            <td>nested2</td>
+                        </tr>
+                        <tr>
+                            <td>nested3</td>
+                            <td>
+                                <table>
+                                    <tr>Nested4
+                                        <td>nested5</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+
+
+        </table>
+
+
+
+    </div>
+
+
     <form action="">
-        <a href="/FullStack/index.html">
+        <a href="index.html">
             <input type="button" value="Back">
         </a>
 
