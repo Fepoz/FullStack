@@ -5,46 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ToDo</title>
-    <style>
-    
-        table, th, td {
-  border:1px solid black;
-  border-collapse: collapse;
-}
-td{
-    text-align: center;
-}
-
-</style>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
-    <h1>Todo</h1>
-<table style="width: 100%;">
-    <tbody>
-        <tr>
-            <th>Serial No.</th>
-            <th>ToDo</th>
-            <th>Status</th>
-            <th>Action</th>
-        </tr>
-        <tr>
-            <td>1</td>
-            <td>Json</td>
-            <td>Pending</td>
-            <td><input type="button" name="EditTodo" id="" value="Edit" onclick="Edit()">
-            <input type="button" name="DeleteTodo" id="" value="Delete" onclick="Delete()">
-            </td>
-        </tr>
-    </tbody>
+    <table border="">
+        <thead><tr><th>Sn.</th><th>ToDo</th><th>Status</th></tr></thead>
+        <tbody id="tbodyToDo"></tbody>
+    </table>
+    
+
+
     <script>
-        function EditTodo(){
+        $(document).ready (function(){
+            BindData();
 
-        }
-      
+        });
+        function BindData(){
+            jQuery.support.cors = true;
+            $.ajax(
+                {
+                    url: 'https://jsonplaceholder.typicode.com/todos',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data){
+                        var sn=1;
+                        var str="";
+                        $.each(data, function (index, item)
+                        {
+                            str= "<tr><td>"+sn+"</td><td>" + item.title + "</td><td>" + item.completed + "</td></tr>"   
+                            $("#tbodyToDo").append(str)  
+                            str="";          
+                            sn++;
+                        });
+                    },
+                    error: function (jqXHR, textStatus, err)
+                    {
+                      alert(err);
+                    }
+                 });
+             }
+                
+            
+        
     </script>
-
-</table>
-
 </body>
 </html>
