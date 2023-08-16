@@ -8,14 +8,34 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
-    <table border="">
-        <thead><tr><th>Sn.</th><th>ToDo</th><th>Status</th></tr></thead>
-        <tbody id="tbodyToDo"></tbody>
-    </table>
+    <div>
+       
+        <div class="mb-3">
+            <label for="todo-input" class="form-label">Add Todo</label>
+            <input type="text" class="form-control" id="todo-input">
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="addTodo()">Add</button>
+   
+</div>
+<table border="">
+    <thead>
+        <tr>
+            <th>Sn.</th>
+            <th>ToDo</th>
+            <th>Status</th>
+            <th colspan="2">Action</th>
+        </tr>
+    </thead>
+    <tbody id="tbodyToDo"></tbody>
+</table>
     
 
 
-    <script>
+         <script>
+        function addTodo() {
+               AddData();
+ 
+}
         $(document).ready (function(){
             BindData();
 
@@ -32,7 +52,7 @@
                         var str="";
                         $.each(data, function (index, item)
                         {
-                            str= "<tr><td>"+sn+"</td><td>" + item.title + "</td><td>" + item.completed + "</td></tr>"   
+                            str= "<tr><td>"+sn+"</td><td>" + item.title + "</td><td>" + item.completed + "</td><td><button onclick='EditData'>Edit</button onclick='deleteData'></td><td><button>Delete</button></td></tr>" 
                             $("#tbodyToDo").append(str)  
                             str="";          
                             sn++;
@@ -45,6 +65,82 @@
                  });
              }
                 
+            function AddData(){
+            jQuery.support.cors = true;
+            $.ajax(
+                {
+                    url: 'https://jsonplaceholder.typicode.com/posts',
+                    type: 'Post',
+                    dataType: 'json',
+                    data:JSON.stringify({
+                    title: 'sachin',
+                  body: 'sachin',
+                  userId: 1,
+                   }),
+                    success: function (data){
+                       alert(data);
+                    },
+                    error: function (jqXHR, textStatus, err)
+                    {
+                      alert(err);
+                    }
+                 });
+
+                
+                 
+             }
+             function EditData(){
+            jQuery.support.cors = true;
+            $.ajax(
+                {
+                    url: 'https://jsonplaceholder.typicode.com/posts',
+                    type: 'Put',
+                    dataType: 'json',
+                    data:JSON.stringify({
+                    title: 'sachin',
+                  body: 'sachin',
+                  userId: 1,
+                   }),
+                    success: function (data){
+                       alert(data);
+                    },
+                    error: function (jqXHR, textStatus, err)
+                    {
+                      alert(err);
+                    }
+                 });
+                }
+
+
+
+                function deleteData(){
+            jQuery.support.cors = true;
+            $.ajax(
+                {
+                    url: 'https://jsonplaceholder.typicode.com/posts',
+                    type: 'Delete',
+                    dataType: 'json',
+                    data:JSON.stringify({
+                    title: 'sachin',
+                  body: 'sachin',
+                  userId: 1,
+                   }),
+                    success: function (data){
+                       alert(data);
+                    },
+                    error: function (jqXHR, textStatus, err)
+                    {
+                      alert(err);
+                    }
+                 });
+                }
+
+
+
+
+ 
+        
+    </script>
             
         
     </script>

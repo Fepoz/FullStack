@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple CRUD Example in javaScript</title>
+  <style>
+
+    .crud-form{
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    .crud-form input{
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .crud-form button {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+    .crud-list {
+      margin-top: 20px;
+    }
+    .crud-item {
+      margin-bottom: 5px;
+      padding: 5px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>   
+<body>
+  <div class="crud-form">
+    <h2>CRUD EXAMPLE</h2>
+    <input type="text" id="name" placeholder="Name">
+    <input type="text" id="age" placeholder="Age">
+    <button onclick="Create()">Create</button>
+
+  </div>
+
+  <div class="crud-list" id="list"></div>
+
+  <script>
+
+    var data = [];
+
+    function Create(){
+      var nameInput = document.getElementById('name');
+      var ageInput = document.getElementById('age');
+
+
+      var name = nameInput.value;
+      var age = ageInput.value;
+
+      var newItem = {
+        name: name,
+        age: age
+      };
+
+
+      data.push(newItem);
+
+      renderList();
+      //clear the input fields
+
+      nameInput.value = '';
+      ageInput.value = '';  
+    }
+
+
+    function renderList(){
+      var listDiv = document.getElementById('list');
+      listDiv.innerHTML = '';
+
+     for (var i = 0; i<data.length; i++) {
+      var item = data[i];
+
+
+      var itemDiv = document.createElement('div');
+      itemDiv.classList.add('crud-item');
+      itemDiv.textContent = 'Name: ' + item.name + ', Age: ' + item.age;
+
+      var deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.addEventListener('click', deleteItem.bind(null, i));
+
+        itemDiv.appendChild(deleteButton);
+        listDiv.appendChild(itemDiv);
+      }
+    }
+
+    function deleteItem(index) {
+      data.splice(index, 1);
+      renderList();
+    }
+     
+    
+  </script>
+</body>
+</html>

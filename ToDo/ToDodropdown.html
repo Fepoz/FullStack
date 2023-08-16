@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+ <select name="todo" id="todo">
+    <option value="">ToDo list</option>
+
+
+
+ </select>
+
+    
+
+
+    <script>
+        $(document).ready (function(){
+            BindData();
+
+        });
+        function BindData(){
+            jQuery.support.cors = true;
+            $.ajax(
+                {
+                    url: 'https://jsonplaceholder.typicode.com/todos',
+                    type: 'GET',
+                    dataType: 'json',
+                    success: function (data){
+                        var sn=1;
+                        var str="";
+                        $.each(data, function (index, item)
+                        {
+                            str=  "<option>"+item.title +"</option>"
+                            $("#todo").append(str)  
+                            str="";          
+                            sn++;
+                        });
+                    },
+                    error: function (jqXHR, textStatus, err)
+                    {
+                      alert(err);
+                    }
+                 });
+             }
+                
+            
+        
+    </script>
+</body>
+</html> 

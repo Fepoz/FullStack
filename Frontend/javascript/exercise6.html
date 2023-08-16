@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Guess the alphabet I am thinking of. Is it a,b,c,d,e?</p>
+    <input type="text" id="textInput">
+    <button onclick="myfunction()">Try it</button>
+    <p id="demo"></p>
+
+    <script>
+        function myfunction(){
+            var letter = document.getElementById('textInput').value;
+            var text;
+
+            if(letter === 'c'){
+                text = "Spot on Good job!";
+            }
+            else if (letter === 'b' || letter === 'd')
+            {
+                text = "Close, but not close enough";
+            }
+            else{
+                text = "Waaay off.."
+            }
+          
+            document.getElementById("demo").innerHTML= text;
+
+        }
+    </script>
+
+</body>
+</html>
